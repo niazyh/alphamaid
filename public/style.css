@@ -1,0 +1,130 @@
+/* Setting the background color and basic body styling */
+body {
+    background-color: #4B2F2C;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    padding-top: 40px;
+    /* Gap at the top of the page */
+}
+
+/* Centering the images and adding spacing */
+.image-container {
+    text-align: center;
+    margin: 0;
+    /* Remove default margin */
+    max-width: 100%;
+    /* Allow images to take up more space */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Rescale burn.jpg to fit the viewport */
+.large-image img {
+    max-height: 90vh;
+    /* Shorter height: 90% of the viewport */
+    width: auto;
+    /* Maintain aspect ratio */
+    margin-bottom: 60px;
+    /* Add gap below burn.jpg */
+}
+
+/* Standard styling for ambrowncrop.jpg */
+.small-image img {
+    height: auto;
+    /* Allow ambrowncrop.jpg to scale naturally */
+    width: 100%;
+    /* Ensure it fills the width of its container */
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    /* Add gap above ambrowncrop.jpg */
+    margin-bottom: 25px;
+    /* Reduce gap below ambrowncrop.jpg */
+}
+
+
+/* Styling the content area */
+.content {
+    text-align: center;
+    /* Center-align content within the form */
+    margin: 0;
+    /* Remove default margin */
+    position: relative;
+    /* Enable positioning for any adjustments */
+    top: -20px;
+    /* Raise the email bar and button slightly */
+}
+
+/* Styling the form */
+form {
+    margin: 0 auto;
+    /* Keep form centered within the container */
+    display: flex;
+    flex-direction: column;
+    /* Stack form elements vertically */
+    align-items: center;
+    /* Center form elements */
+    position: relative;
+    /* Enable movement */
+    left: 45px;
+    /* Move the form elements to the right */
+}
+
+label {
+    margin-bottom: 10px;
+    /* Add spacing below the "Email" label */
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* Add spacing below the email input */
+    text-align: left;
+    /* Ensure the email text is left-aligned */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffb700d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 190%;
+    /* Increase width to make the email box longer */
+    max-width: 500px;
+    /* Set a maximum width for larger screens */
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* Add spacing below the email input */
+    text-align: left;
+    /* Ensure the email text is left-aligned */
+}

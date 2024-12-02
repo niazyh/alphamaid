@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Displaying burn.jpg resized to fit on the page -->
+    <div class="image-container large-image">
+        <img src="burn.jpg" alt="Burn Image">
+    </div>
+
+    <!-- Displaying ambrown.jpg with larger size and close to email bar -->
+    <div class="image-container large-image">
+        <img src="ambrowncrop.jpg" alt="AM Brown Image">
+    </div>
+
+    <!-- Centered form and button -->
+    <div class="content">
+        <form action="/subscribe" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Stay in the loop</button>
+        </form>
+    </div>
+
+    <!-- Displaying tub.jpg below the form -->
+    <div class="image-container">
+        <img src="tub.jpg" alt="Tub Image">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
