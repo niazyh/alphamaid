@@ -1,10 +1,11 @@
+require('dotenv').config(); // Load environment variables from a .env file
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer'); // Import Nodemailer
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Use environment variable for port, fallback to 3000
 
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,8 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 const transporter = nodemailer.createTransport({
     service: 'gmail', // Use your email provider (e.g., Gmail, Outlook)
     auth: {
-        user: 'alphamaid@gmail.com', // Replace with your email
-        pass: 'pibmmcmfbtynafzp', // Replace with your email password or app password
+        user: process.env.EMAIL_USER, // Use environment variable
+        pass: process.env.EMAIL_PASS, // Use environment variable
     },
 });
 
@@ -37,8 +38,8 @@ app.post('/subscribe', (req, res) => {
 
     // Send email notification
     const mailOptions = {
-        from: '"Your Website" <alphamaid@gmail.com>', // Sender address
-        to: 'alphamaid@gmail.com', // Your email address to receive notifications
+        from: `"Your Website" <${process.env.EMAIL_USER}>`, // Sender address
+        to: process.env.EMAIL_USER, // Your email address to receive notifications
         subject: 'New Subscriber Alert',
         text: `You have a new subscriber: ${email}`,
     };
@@ -53,13 +54,19 @@ app.post('/subscribe', (req, res) => {
     });
 });
 
+// Health check route
+app.get('/healthz', (req, res) => {
+    res.status(200).send('OK');
+    console.log('/healthz endpoint hit - Service is running'); // Debug log for health checks
+});
+
 // Catch-all middleware to log unexpected routes (Optional)
 app.use((req, res) => {
     console.log(`Unhandled route: ${req.method} ${req.url}`); // Debug log 7
     res.status(404).send('Route not found');
 });
 
-// Start the server
-app.listen(PORT, () => {
+// Start the server and bind to 0.0.0.0 for external access
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running at http://localhost:${PORT}`); // Debug log 8
 });
