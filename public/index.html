@@ -10,31 +10,90 @@
 </head>
 
 <body>
-    <!-- Displaying burn.jpg resized to fit on the page -->
+    <!-- Sidebar with clickable titles -->
+    <div class="sidebar">
+        <div class="title">
+            <h3 id="videos-title" onclick="toggleContent('videos-content')">Videos</h3>
+            <div id="videos-content" class="hidden">
+                <!-- Video 1 -->
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/fJz1yJ-wrf8?si=LuzAuOwOmNV15ZiR"
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                        encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <br>
+                <!-- Video 2 -->
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/QsXfQXQY0fo?si=6WG6c1XW6BO0QfDY"
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                        encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <h3 id="music-title" onclick="toggleContent('music-content')">Music</h3>
+            <div id="music-content" class="hidden">
+                <a href="https://alphamaid.bandcamp.com" target="_blank" class="music-icon">
+                    <img src="bandcamp-icon.png" alt="Bandcamp Icon">
+                </a>
+                <a href="https://soundcloud.com/alpha-maid" target="_blank" class="music-icon">
+                    <img src="soundcloud-icon.png" alt="SoundCloud Icon">
+                </a>
+                <a href="https://open.spotify.com/artist/6Rjl3uxMWyxlvDo6FnT6kW?si=kA6A3UdLR-qvp8V78SV47g"
+                    target="_blank" class="music-icon">
+                    <img src="spotify-icon.png" alt="Spotify Icon">
+                </a>
+            </div>
+        </div>
+        <div class="title">
+            <h3 id="live-dates-title" onclick="toggleContent('live-dates-content')">Live Dates</h3>
+            <div id="live-dates-content" class="hidden">
+                <p>No upcoming live dates</p>
+            </div>
+        </div>
+        <div class="title">
+            <h3 id="bookings-title" onclick="toggleContent('bookings-content')">Bookings</h3>
+            <div id="bookings-content" class="hidden">
+                <p>john.qujunktions@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Centered blurredmirror.jpg -->
     <div class="image-container large-image">
         <img src="blurredmirror.jpg" alt="Burn Image" data-pin-nopin="true">
     </div>
 
-    <!-- Displaying ambrown.jpg with larger size and close to email bar -->
+    <!-- Centered ambrowncrop.jpg -->
     <div class="image-container large-image">
         <img src="ambrowncrop.jpg" alt="AM Brown Image" data-pin-nopin="true">
     </div>
 
-    <!-- Centered form and button -->
+    <!-- Centered email form -->
     <div class="content">
         <form action="/subscribe" method="POST">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            <button type="submit">Stay in the loop</button>
+            <button type="submit">stay in the loop</button>
         </form>
     </div>
 
-    <!-- Displaying tub.jpg below the form -->
-    <div class="image-container">
+    <!-- Full-width tub.jpg -->
+    <div class="image-container full-width">
         <img src="tub.jpg" alt="Tub Image" data-pin-nopin="true">
     </div>
 
-    <script src="main.js"></script>
+    <script>
+        // Toggle visibility of individual content blocks
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.classList.toggle('hidden');
+        }
+    </script>
 </body>
 
 </html>

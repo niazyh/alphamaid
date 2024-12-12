@@ -1,4 +1,4 @@
-/* Setting the background color and basic body styling */
+/* Basic styling for body */
 body {
     background-color: #4B2F2C;
     color: white;
@@ -11,94 +11,145 @@ body {
     justify-content: flex-start;
     min-height: 100vh;
     overflow-x: hidden;
-    /* Prevent horizontal scrolling */
     padding-top: 40px;
-    /* Gap at the top of the page */
 }
 
-/* Centering the images and adding spacing */
+/* Sidebar styling */
+.sidebar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 200px;
+    color: white;
+    z-index: 10;
+    /* Ensures sidebar is always on top */
+}
+
+/* Sidebar titles styling */
+.title h3 {
+    cursor: pointer;
+    padding: 5px 0;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: transparent;
+    border: none;
+    color: white;
+    /* Text color remains white */
+    transition: text-decoration 0.3s ease;
+}
+
+.title h3:hover {
+    text-decoration: underline;
+    /* Underlines the text */
+    color: white;
+    /* Ensure the text color stays white */
+}
+
+/* Sidebar content styling */
+.title div {
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: white;
+    z-index: 1;
+    /* Ensures content doesn’t interfere with sidebar */
+}
+
+/* Ensure content does not block interaction */
+#videos-content iframe {
+    pointer-events: auto;
+    width: 250%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Hide content initially */
+.hidden {
+    display: none;
+}
+
+/* Styling for music icons */
+.music-icon {
+    display: inline-block;
+    margin: 5px;
+}
+
+.music-icon img {
+    width: 40px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.music-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Centering all images except tub.jpg */
 .image-container {
     text-align: center;
     margin: 0 auto;
-    /* Center the image container */
-    max-width: 100%;
 }
 
 .image-container img {
     max-width: 100%;
     height: auto;
-    /* Maintain aspect ratio */
     display: block;
     margin: 0 auto;
 }
 
-/* Ensure burn.jpg resizes correctly */
+/* Specific styling for large images */
 .large-image img {
     max-height: 90vh;
-    /* Fits within the viewport */
-    width: auto;
     margin-bottom: 20px;
-    /* Add spacing below burn.jpg */
 }
 
-/* Standard styling for ambrowncrop.jpg */
-.small-image img {
-    height: auto;
+/* Full-width styling for tub.jpg */
+.image-container.full-width img {
     width: 100%;
-    /* Ensure it fills the width of its container */
+    height: auto;
     display: block;
-    margin: 0 auto;
-    margin-top: 20px;
-    /* Add gap above ambrowncrop.jpg */
-    margin-bottom: 25px;
-    /* Add gap below ambrowncrop.jpg */
+    margin: 0;
+    padding: 0;
 }
 
-/* Styling the content area */
+/* Centered email form */
 .content {
     text-align: center;
-    /* Center-align content within the form */
     margin: 0 auto;
-    /* Center the content block */
     position: relative;
-    /* Enable positioning for adjustments */
     top: -20px;
-    /* Raise the email bar and button slightly */
     width: 100%;
-    /* Ensure it spans the full width */
 }
 
-/* Styling the form */
 form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    /* Stack form elements vertically */
     align-items: center;
-    /* Center form elements */
 }
 
-/* Styling the label */
 label {
     margin-bottom: 10px;
-    /* Add spacing below the "Email" label */
 }
 
-/* Styling the email input box */
 input[type="email"] {
     padding: 10px;
     width: 90%;
-    /* Responsive width */
     max-width: 600px;
-    /* Limit maximum width */
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
-    /* Add spacing below the email input */
     text-align: left;
 }
 
-/* Styling the button */
 button {
     padding: 10px 20px;
     background-color: #ffb700d9;
@@ -107,70 +158,9 @@ button {
     border-radius: 5px;
     cursor: pointer;
     width: auto;
-    /* Ensure the button does not expand unnecessarily */
     margin-top: 10px;
-    /* Add spacing above the button */
 }
 
 button:hover {
     background-color: #000000;
-}
-
-/* Styling for smaller screens (mobile) */
-@media (max-width: 768px) {
-    .image-container img {
-        max-width: 90%;
-        /* Slight margin on the sides */
-        height: auto;
-    }
-
-    .large-image img {
-        max-height: 80vh;
-        /* Make large images shorter */
-    }
-
-    .content {
-        text-align: center;
-        /* Ensure form elements are centered */
-        width: 90%;
-        /* Adjust width for smaller screens */
-        margin: 0 auto;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        /* Stack elements vertically */
-        align-items: center;
-        /* Center elements horizontally */
-        justify-content: center;
-        /* Center elements vertically */
-    }
-
-    input[type="email"] {
-        padding: 10px;
-        width: 90%;
-        /* Adjust width for mobile */
-        max-width: 600px;
-        /* Limit maximum width */
-        text-align: left;
-    }
-
-    button {
-        width: auto;
-        /* Ensure the button does not stretch unnecessarily */
-        margin-top: 10px;
-        /* Add spacing above the button */
-    }
-}
-
-/* Remove Pinterest "Save" button */
-a[data-pin-log] {
-    display: none !important;
-}
-
-/* Disable Pinterest pinning on all images */
-img {
-    pointer-events: none;
-    /* Disable all Pinterest actions on images */
 }
