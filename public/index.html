@@ -15,22 +15,18 @@
         <div class="title">
             <h3 id="videos-title" onclick="toggleContent('videos-content')">Videos</h3>
             <div id="videos-content" class="hidden">
-                <!-- Video 1 -->
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/fJz1yJ-wrf8?si=LuzAuOwOmNV15ZiR"
-                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                        encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <br>
-                <!-- Video 2 -->
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/QsXfQXQY0fo?si=6WG6c1XW6BO0QfDY"
-                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                        encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -52,9 +48,9 @@
         <div class="title">
             <h3 id="live-dates-title" onclick="toggleContent('live-dates-content')">Live Dates</h3>
             <div id="live-dates-content" class="hidden">
-                <p>14.03.25 - Zurich - Gessnerallee</p>
-                <a href="https://gessnerallee.ch/veranstaltungen/alpha-maid-konzert" target="_blank"
-                    class="button">Tickets</a>
+                <p style="margin: 0; white-space: nowrap;">14.03.25 - Gessnerallee - Zurich - <a
+                        href="https://gessnerallee.ch/veranstaltungen/alpha-maid-konzert" target="_blank"
+                        class="inline-link">Tickets</a></p>
             </div>
         </div>
         <div class="title">
@@ -65,17 +61,14 @@
         </div>
     </div>
 
-    <!-- Centered blurredmirror.jpg -->
     <div class="image-container large-image">
         <img src="blurredmirror.jpg" alt="Burn Image" data-pin-nopin="true">
     </div>
 
-    <!-- Centered ambrowncrop.jpg -->
     <div class="image-container large-image">
         <img src="ambrowncrop.jpg" alt="AM Brown Image" data-pin-nopin="true">
     </div>
 
-    <!-- Centered email form -->
     <div class="content">
         <form action="/subscribe" method="POST">
             <label for="email">Email:</label>
@@ -84,18 +77,17 @@
         </form>
     </div>
 
-    <!-- Full-width tub.jpg -->
     <div class="image-container full-width">
         <img src="tub.jpg" alt="Tub Image" data-pin-nopin="true">
     </div>
 
     <script>
-        // Toggle visibility of individual content blocks
         function toggleContent(id) {
             const content = document.getElementById(id);
             content.classList.toggle('hidden');
         }
     </script>
+
 </body>
 
 </html>

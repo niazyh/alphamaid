@@ -22,7 +22,6 @@ body {
     width: 200px;
     color: white;
     z-index: 10;
-    /* Ensures sidebar is always on top */
 }
 
 /* Sidebar titles styling */
@@ -36,15 +35,12 @@ body {
     background-color: transparent;
     border: none;
     color: white;
-    /* Text color remains white */
     transition: text-decoration 0.3s ease;
 }
 
 .title h3:hover {
     text-decoration: underline;
-    /* Underlines the text */
     color: white;
-    /* Ensure the text color stays white */
 }
 
 /* Sidebar content styling */
@@ -57,7 +53,6 @@ body {
     font-size: 14px;
     color: white;
     z-index: 1;
-    /* Ensures content doesn’t interfere with sidebar */
 }
 
 /* Ensure content does not block interaction */
@@ -90,6 +85,22 @@ body {
 
 .music-icon img:hover {
     transform: scale(1.1);
+}
+
+/* Styling for the inline ticket link */
+.inline-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline;
+}
+
+.inline-link:visited {
+    color: red;
+}
+
+.inline-link:hover {
+    text-decoration: underline;
 }
 
 /* Centering all images except tub.jpg */
