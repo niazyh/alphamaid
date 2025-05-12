@@ -2,102 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Maid</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpha Maid</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <!-- Sidebar with clickable titles -->
-    <div class="sidebar">
-        <div class="title">
-            <h3 id="videos-title" onclick="toggleContent('videos-content')">Videos</h3>
-            <div id="videos-content" class="hidden">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/fJz1yJ-wrf8?si=LuzAuOwOmNV15ZiR"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <br>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/QsXfQXQY0fo?si=6WG6c1XW6BO0QfDY"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
+  <!-- Sidebar with clickable titles -->
+  <div class="sidebar">
+    <div class="title">
+      <h3 id="videos-title" onclick="toggleContent('videos-content')">Videos</h3>
+      <div id="videos-content" class="hidden">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/fJz1yJ-wrf8?si=LuzAuOwOmNV15ZiR" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="title">
-            <h3 id="music-title" onclick="toggleContent('music-content')">Music</h3>
-            <div id="music-content" class="hidden">
-                <a href="https://alphamaid.bandcamp.com" target="_blank" class="music-icon">
-                    <img src="bandcamp-icon.png" alt="Bandcamp Icon">
-                </a>
-                <a href="https://soundcloud.com/alpha-maid" target="_blank" class="music-icon">
-                    <img src="soundcloud-icon.png" alt="SoundCloud Icon">
-                </a>
-                <a href="https://open.spotify.com/artist/6Rjl3uxMWyxlvDo6FnT6kW?si=kA6A3UdLR-qvp8V78SV47g"
-                    target="_blank" class="music-icon">
-                    <img src="spotify-icon.png" alt="Spotify Icon">
-                </a>
-            </div>
+        <br>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/QsXfQXQY0fo?si=6WG6c1XW6BO0QfDY" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="title">
-            <h3 id="live-dates-title" onclick="toggleContent('live-dates-content')">Live Dates</h3>
-            <div id="live-dates-content" class="hidden">
-                <del style="white-space: nowrap; text-decoration-color: red;">
-                    14.03.25 - Zurich - Gesseneralle - <a
-                        href="https://gessnerallee.ch/veranstaltungen/alpha-maid-konzert" target="_blank"
-                        class="button-link">Tickets</a>
-                </del>
-                <p style="white-space: nowrap; margin: 0;">
-                    10.04.25 - London - Avalon Cafe - <a href="https://ra.co/events/2130988" target="_blank"
-                        class="button-link">Tickets</a>
-                </p>
-                <p style="white-space: nowrap; margin: 0;">
-                    20.05.25 - Marseille - The Echo - <a
-                        href="https://billetterie.espace-julien.com/#sonic-list/theechofestival25" target="_blank"
-                        class="button-link">Tickets</a>
-                </p>
-            </div>
-        </div>
-        <div class="title">
-            <h3 id="bookings-title" onclick="toggleContent('bookings-content')">Bookings</h3>
-            <div id="bookings-content" class="hidden">
-                <p>john.qujunktions@gmail.com</p>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <div class="image-container large-image">
-        <img src="blurredmirror.jpg" alt="Burn Image" data-pin-nopin="true">
+    <div class="title">
+      <h3 id="music-title" onclick="toggleContent('music-content')">Music</h3>
+      <div id="music-content" class="hidden">
+        <a href="https://alphamaid.bandcamp.com" target="_blank" class="music-icon">
+          <img src="bandcamp-icon.png" alt="Bandcamp Icon">
+        </a>
+        <a href="https://soundcloud.com/alpha-maid" target="_blank" class="music-icon">
+          <img src="soundcloud-icon.png" alt="SoundCloud Icon">
+        </a>
+        <a href="https://open.spotify.com/artist/6Rjl3uxMWyxlvDo6FnT6kW?si=kA6A3UdLR-qvp8V78SV47g" target="_blank" class="music-icon">
+          <img src="spotify-icon.png" alt="Spotify Icon">
+        </a>
+      </div>
     </div>
 
-    <div class="image-container large-image">
-        <img src="ambrowncrop.jpg" alt="AM Brown Image" data-pin-nopin="true">
+    <div class="title">
+      <h3 id="live-dates-title" onclick="toggleContent('live-dates-content')">Live Dates</h3>
+      <div id="live-dates-content" class="hidden">
+        <del style="white-space: nowrap; text-decoration: line-through red;">
+          14.03.25 - Zurich - Gesseneralle - 
+          <a href="https://gessnerallee.ch/veranstaltungen/alpha-maid-konzert" target="_blank" class="button-link">Tickets</a>
+        </del>
+        <br>
+        <del style="white-space: nowrap; margin: 0; text-decoration: line-through red;">
+          10.04.25 - London - Avalon Cafe - 
+          <a href="https://ra.co/events/2130988" target="_blank" class="button-link">Tickets</a>
+        </del>
+        <br>
+        <p style="white-space: nowrap; margin: 0;">
+          20.05.25 - Marseille - The Echo - 
+          <a href="https://billetterie.espace-julien.com/#sonic-list/theechofestival25" target="_blank" class="button-link">Tickets</a>
+        </p>
+        <p style="white-space: nowrap; margin: 0;">
+          21.05.25 - Lyon - Le Périscope - 
+          <a href="https://www.periscope-lyon.com/en/concerts/alpha-maid-2/" target="_blank" class="button-link">Tickets</a>
+        </p>
+        <p style="white-space: nowrap; margin: 0;">
+          22.05.25 - Paris - La Flèche d'Or - 
+          <a href="https://shotgun.live/fr/events/pieg-tapage-nocturne?fbclid=PAZXh0bgNhZW0CMTEAAafNTDhiM8SXRFSW9V0GVXq4oy2ilJrbuMBIDrAtNq2yA656sNOtU8HCaVPBQw_aem_SirhjlA4Cckk-B9DJBkalg" target="_blank" class="button-link">Tickets</a>
+        </p>
+      </div>
     </div>
 
-    <div class="content">
-        <form action="/subscribe" method="POST">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">stay in the loop</button>
-        </form>
+    <div class="title">
+      <h3 id="bookings-title" onclick="toggleContent('bookings-content')">Bookings</h3>
+      <div id="bookings-content" class="hidden">
+        <p>john@qujunktions.com</p>
+      </div>
     </div>
+  </div>
 
-    <div class="image-container full-width">
-        <img src="tub.jpg" alt="Tub Image" data-pin-nopin="true">
-    </div>
+  <div class="image-container large-image">
+    <img src="am header.png" alt="AM Header Image" data-pin-nopin="true">
+</div>
 
-    <script>
-        function toggleContent(id) {
-            const content = document.getElementById(id);
-            content.classList.toggle('hidden');
-        }
-    </script>
+  <div class="image-container large-image">
+    <img src="ambrowncrop.jpg" alt="AM Brown Image" data-pin-nopin="true">
+  </div>
+
+  <div class="content">
+    <form action="/subscribe" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">stay in the loop</button>
+    </form>
+  </div>
+
+  <div class="image-container full-width">
+    <img src="tub.jpg" alt="Tub Image" data-pin-nopin="true">
+  </div>
+
+  <script>
+    function toggleContent(id) {
+      const content = document.getElementById(id);
+      content.classList.toggle('hidden');
+    }
+  </script>
 </body>
 
 </html>
