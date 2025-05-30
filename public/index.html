@@ -12,23 +12,42 @@
 <body>
   <!-- Sidebar with clickable titles -->
   <div class="sidebar">
+
+    <!-- Videos -->
     <div class="title">
       <h3 id="videos-title" onclick="toggleContent('videos-content')">Videos</h3>
       <div id="videos-content" class="hidden">
+        <!-- Clickable YouTube logo above videos, nudged further left -->
+        <a href="https://www.youtube.com/channel/UCmoOGHH17nIqcBx2pGohthQ"
+           target="_blank"
+           class="music-icon"
+           style="display:block; text-align:center; margin-bottom:10px; margin-left:-40px;">
+          <img src="youtube-icon.png" alt="YouTube Channel">
+        </a>
+
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/fJz1yJ-wrf8?si=LuzAuOwOmNV15ZiR" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/nzQF0dvcJlo?si=Xkvx2L0yS8RNM4hb"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen>
+          </iframe>
         </div>
         <br>
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/QsXfQXQY0fo?si=6WG6c1XW6BO0QfDY" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/fJz1yJ-wrf8?si=LuzAuOwOmNV15ZiR"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen>
+          </iframe>
         </div>
       </div>
     </div>
 
+    <!-- Music -->
     <div class="title">
       <h3 id="music-title" onclick="toggleContent('music-content')">Music</h3>
       <div id="music-content" class="hidden">
@@ -38,55 +57,69 @@
         <a href="https://soundcloud.com/alpha-maid" target="_blank" class="music-icon">
           <img src="soundcloud-icon.png" alt="SoundCloud Icon">
         </a>
-        <a href="https://open.spotify.com/artist/6Rjl3uxMWyxlvDo6FnT6kW?si=kA6A3UdLR-qvp8V78SV47g" target="_blank" class="music-icon">
+        <a href="https://open.spotify.com/artist/6Rjl3uxMWyxlvDo6FnT6kW?si=kA6A3UdLR-qvp8V78SV47g"
+           target="_blank"
+           class="music-icon">
           <img src="spotify-icon.png" alt="Spotify Icon">
         </a>
       </div>
     </div>
 
+    <!-- Live Dates -->
     <div class="title">
       <h3 id="live-dates-title" onclick="toggleContent('live-dates-content')">Live Dates</h3>
       <div id="live-dates-content" class="hidden">
         <del style="white-space: nowrap; text-decoration: line-through red;">
-          14.03.25 - Zurich - Gesseneralle - 
-          <a href="https://gessnerallee.ch/veranstaltungen/alpha-maid-konzert" target="_blank" class="button-link">Tickets</a>
+          14.03.25 - Zurich - Gesseneralle -
+          <a href="https://gessnerallee.ch/veranstaltungen/alpha-maid-konzert"
+             target="_blank"
+             class="button-link">Tickets</a>
         </del>
         <br>
         <del style="white-space: nowrap; margin: 0; text-decoration: line-through red;">
-          10.04.25 - London - Avalon Cafe - 
+          10.04.25 - London - Avalon Cafe -
           <a href="https://ra.co/events/2130988" target="_blank" class="button-link">Tickets</a>
         </del>
         <br>
         <del style="white-space: nowrap; margin: 0; text-decoration: line-through red;">
-          20.05.25 - Marseille - The Echo - 
-          <a href="https://billetterie.espace-julien.com/#sonic-list/theechofestival25" target="_blank" class="button-link">Tickets</a>
+          20.05.25 - Marseille - The Echo -
+          <a href="https://billetterie.espace-julien.com/#sonic-list/theechofestival25"
+             target="_blank"
+             class="button-link">Tickets</a>
         </del>
         <br>
         <del style="white-space: nowrap; margin: 0; text-decoration: line-through red;">
-          21.05.25 - Lyon - Le Périscope - 
-          <a href="https://www.periscope-lyon.com/en/concerts/alpha-maid-2/" target="_blank" class="button-link">Tickets</a>
+          21.05.25 - Lyon - Le Périscope -
+          <a href="https://www.periscope-lyon.com/en/concerts/alpha-maid-2/"
+             target="_blank"
+             class="button-link">Tickets</a>
         </del>
         <br>
         <del style="white-space: nowrap; margin: 0; text-decoration: line-through red;">
-          22.05.25 - Paris - La Flèche d'Or - 
-          <a href="https://shotgun.live/fr/events/pieg-tapage-nocturne?fbclid=PAZXh0bgNhZW0CMTEAAafNTDhiM8SXRFSW9V0GVXq4oy2ilJrbuMBIDrAtNq2yA656sNOtU8HCaVPBQw_aem_SirhjlA4Cckk-B9DJBkalg" target="_blank" class="button-link">Tickets</a>
+          22.05.25 - Paris - La Flèche d'Or -
+          <a href="https://shotgun.live/fr/events/pieg-tapage-nocturne?fbclid=PAZXh0bgNhZW0CMTEAAafNTDhiM8SXRFSW9V0GVXq4oy2ilJrbuMBIDrAtNq2yA656sNOtU8HCaVPBQw_aem_SirhjlA4Cckk-B9DJBkalg"
+             target="_blank"
+             class="button-link">Tickets</a>
         </del>
         <br>
         <p style="white-space: nowrap; margin: 0;">
-          07.11.25 - Utrecht - Le Guess Who - 
+          07.11.25 - Utrecht, NL - Le Guess Who -
           <a href="https://leguesswho.com/tickets" target="_blank" class="button-link">Tickets</a>
         </p>
       </div>
     </div>
 
+    <!-- Bookings -->
     <div class="title">
       <h3 id="bookings-title" onclick="toggleContent('bookings-content')">Bookings</h3>
       <div id="bookings-content" class="hidden">
         <p>john@qujunktions.com</p>
       </div>
     </div>
+
   </div>
 
+  <!-- Images -->
   <div class="image-container large-image">
     <img src="am-header.png" alt="AM Header Image" data-pin-nopin="true">
   </div>
